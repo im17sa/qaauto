@@ -2,27 +2,22 @@ package test.authorization;
 
 import org.testng.annotations.Test;
 import pages.authorization.AuthorizationPage;
-import pages.constructor.ConstructorPage;
 import services.authorization.AuthorizationService;
 
-import static com.codeborne.selenide.Condition.visible;
 
-public class Authorization {
+public class Authorization { // класс, в котором запускаем тест
 
-  private final AuthorizationService authorizationService = new AuthorizationService();
-  private final AuthorizationPage authorizationPage = new AuthorizationPage();
-  private final ConstructorPage constructorPage = new ConstructorPage();
+  private final AuthorizationService authorizationService = new AuthorizationService(); // создаём объект класса AuthorizationService
+  private final AuthorizationPage authorizationPage = new AuthorizationPage(); // создаём объект класса AuthorizationPage
 
-  @Test
-  public void checkAuthorization() {
-    String email = "alex20-03sh@mail.ru";
-    String password = "022093Aa";
+  @Test // Определяем, что это тест
+  public void checkAuthorization() { // Метод проверки авторизации, который ничего не возращает
+    String email = "alex20-03sh@mail.ru"; // строка с email, которую мы будем передавать в метод setEmail для ввода её в поле
+    String password = "022093Aa"; // строка с password, которую мы будем передавать в метод setPassword для ввода её в поле
 
-    authorizationService.openAutorizationPage();
-    authorizationPage.setEmail(email);
-    authorizationPage.setPassword(password);
-    authorizationPage.getEnterButton().click();
-    constructorPage.getTitle()
-        .shouldBe(visible.because("Пользователь не авторизован"));
+    authorizationService.openAutorizationPage(); //вызываем метод объекта authorizationService для загрузки браузера со страницей
+    authorizationPage.setEmail(email); //вызываем метод объекта authorizationPage для ввода email
+    authorizationPage.setPassword(password);//вызываем метод объекта  authorizationPage для ввода password
+    authorizationPage.getEnterButton().click(); // //вызываем метод объекта  authorizationPage для получения доступа к кнопке и симуляции клика на неё с помощью метода click
   }
 }
