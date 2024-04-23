@@ -3,8 +3,6 @@ import org.testng.annotations.Test;
 import pages.authorization.AuthorizationPage;
 import services.authorization.AuthorizationService;
 
-import static com.codeborne.selenide.Condition.visible;
-
 public class Authorization {
 
   private final AuthorizationService authorizationService = new AuthorizationService();
@@ -19,5 +17,16 @@ public class Authorization {
     authorizationPage.setEmail(email);
     authorizationPage.setPassword(password);
     authorizationPage.getEnterButton().click();
+  }
+  @Test
+  public void checkAuthorizationValidator() {
+    String email = "alex20-03sh@mail.ru";
+    String password = "2131231";
+
+    authorizationService.openAutorizationPage();
+    authorizationPage.setEmail(email);
+    authorizationPage.setPassword(password);
+    authorizationPage.getEnterButton().click();
+    authorizationPage.checkingThePopupValidator();
   }
 }
