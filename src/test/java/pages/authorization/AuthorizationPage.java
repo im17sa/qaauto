@@ -2,18 +2,16 @@ package pages.authorization;
 
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
-
-import static com.codeborne.selenide.Selenide.$x;
 import static com.codeborne.selenide.Selenide.element;
 
-public class AuthorizationPage {
+public class AuthorizationPage { // Класс для поиска элементов на странице и создания методов для подстановки данных для ввода
 
-  private final By EMAIL = By.xpath("//input[@name='email']");
-  private final By PASSWORD = By.xpath("//input[@name='password']");
-  private final By ENTER_BUTTON = By.xpath("//button[contains(text(), 'Войти')]");
-  private final By LINK_REGISTER = By.xpath("//a[contains(text(), 'Зарегистрироваться')]");
-  private final By LINK_FORGOT_PASSWORD = By.xpath("//a[contains(text(), 'Восстановить пароль')]");
-  private final By POPUP_VALIDATOR = By.xpath("//*[text()='email or password are incorrect']"); //ищем точное совпадение
+  private final By EMAIL = By.xpath("//input[@name='email']"); //Находит поле для ввода email по XPath выражению
+  private final By PASSWORD = By.xpath("//input[@name='password']"); //Находит поле для ввода password по XPath выражению
+  private final By ENTER_BUTTON = By.xpath("//button[contains(text(), 'Войти')]"); //Находит кнопку войти по XPath выражению
+  private final By LINK_REGISTER = By.xpath("//a[contains(text(), 'Зарегистрироваться')]"); //Находит ссылку зарегистрироваться по XPath выражению
+  private final By LINK_FORGOT_PASSWORD = By.xpath("//a[contains(text(), 'Восстановить пароль')]");//Находит ссылку восстановить пароль по XPath выражению
+  private final By VALIDATOR = By.xpath("//*[text()='email or password are incorrect']"); //Находит валидатор по XPath выражению
 
   public SelenideElement getEmail() { // Метод для получения доступа к полю ввода email, возвращает объект, имплементирующий интерфейс SelenideElement
     return element(EMAIL); // Метод element получает доступ к полю ввода EMAIL, который передали в аргументе
@@ -34,11 +32,9 @@ public class AuthorizationPage {
   public SelenideElement getEnterButton() { // Метод для получения  доступа к кнопке Войти, возвращает объект, имплементирующий интерфейс SelenideElement
     return element(ENTER_BUTTON); // Метод element получает доступ к кнопке Войти, которую передали в аргументе
   }
-  public SelenideElement getValidator() {
-    return element(POPUP_VALIDATOR);
-  }
-  public void checkingThePopupValidator(){
-    $x(getValidator().getText()); //проверка существует ли данный элемент, если нет, выкидывается исключение
+
+  public SelenideElement getValidator() { //Метод для получения доступа к валидатору, возвращает объект, имплементирующий интерфейс SelenideElement
+    return element(VALIDATOR); // Для получения доступа к элементу, который передали в аргументе
   }
 
   public SelenideElement getLinkRegister() { // Метод для получения  доступа к ссылке регистрации, возвращает объект, имплементирующий интерфейс SelenideElement
