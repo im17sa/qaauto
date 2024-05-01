@@ -1,0 +1,2 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Wed May 01 19:56:37 MSK 2024","Wed May 01 19:56:49 MSK 2024","11486","Default Suite","qaauto","test.authorization.Authorization","test.authorization.Authorization","checkAuthorizationValidator","checkAuthorizationValidator",""

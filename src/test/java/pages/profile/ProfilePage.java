@@ -16,7 +16,7 @@ public class ProfilePage {
     чтобы во-первых не было пересечений с профилем в хэдере, во вторых нужно было дополнительное условие по href, т.к. в зависимости
     от активности кнопки в меню профиля класс менялся между "История заказов" и "Профиль", он динамический*/
     private final By LINK_HISTORY_ORDERS = By.xpath("//a[text()='История заказов']");
-    private final By EXIT_BUTTON = By.xpath("//button[text()='Выход']");
+    private final By EXIT_BUTTON = By.xpath("//button[contains(text(), 'Выход')]");// Изменил с полного совпадения, потому что при полном совпадении не всегда кликает на кноку (не знаю по каким причинам)
 
     private final By SAVE_BUTTON = By.xpath("//button[text()='Сохранить']");
     private final By CANCEL_BUTTON = By.xpath("//button[text()='Отменить]");

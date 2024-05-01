@@ -1,0 +1,62 @@
+{
+  "uid" : "a5cfea523f71233e",
+  "name" : "checkAuthorizationValidator",
+  "fullName" : "test.authorization.Authorization.checkAuthorizationValidator",
+  "historyId" : "b4a1c6b1475bb8e9587735ac25b5718b",
+  "time" : {
+    "start" : 1714582597863,
+    "stop" : 1714582609349,
+    "duration" : 11486
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "test.authorization.Authorization"
+  }, {
+    "name" : "testClass",
+    "value" : "test.authorization.Authorization"
+  }, {
+    "name" : "testMethod",
+    "value" : "checkAuthorizationValidator"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Default Suite"
+  }, {
+    "name" : "suite",
+    "value" : "qaauto"
+  }, {
+    "name" : "subSuite",
+    "value" : "test.authorization.Authorization"
+  }, {
+    "name" : "host",
+    "value" : "WingRS"
+  }, {
+    "name" : "thread",
+    "value" : "10792@WingRS.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "a5cfea523f71233e.json",
+  "parameterValues" : [ ]
+}

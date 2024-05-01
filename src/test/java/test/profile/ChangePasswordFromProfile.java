@@ -41,8 +41,8 @@ public class ChangePasswordFromProfile {
 
     @Test // Тест с проверкой кнопок меню профиля и истории заказов (сделал для проверки разделения кнопок в хэдере и меню)
     public void checkProfileInMenu() {
-        String email = "sadart1998@mail.ru";
-        String Password = "123qweasd";
+        String email = "alex20-03sh@mail.ru";
+        String Password = "022093Aa";
 
         authorizationService.openAutorizationPage();
         authorizationPage.setEmail(email);

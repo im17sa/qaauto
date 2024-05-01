@@ -1,0 +1,11 @@
+[ {
+  "uid" : "a5cfea523f71233e",
+  "name" : "checkAuthorizationValidator",
+  "time" : {
+    "start" : 1714582597863,
+    "stop" : 1714582609349,
+    "duration" : 11486
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]
