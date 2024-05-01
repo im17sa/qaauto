@@ -6,7 +6,7 @@ import pages.resetPassword.ResetPasswordPage;
 import services.forgotPassword.ForgotPasswordService;
 import static com.codeborne.selenide.Condition.visible;
 
-public class ForgotAndResetPassword {
+public class ForgotAndResetPasswordTest {
 
     private final ForgotPasswordService forgotPasswordService = new ForgotPasswordService();
     private final ForgotPasswordPage forgotPasswordPage = new ForgotPasswordPage();

@@ -5,7 +5,7 @@ import pages.registration.RegistrationPage;
 import services.registration.RegistrationService;
 import static com.codeborne.selenide.Condition.*;
 
-public class Registration {
+public class RegistrationTest {
 
     private final RegistrationService registrationService =  new RegistrationService();
     private final RegistrationPage registrationPage = new RegistrationPage();

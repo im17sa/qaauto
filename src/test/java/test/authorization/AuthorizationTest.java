@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 import pages.authorization.AuthorizationPage;
 import services.authorization.AuthorizationService;
 
-public class Authorization { // класс, в котором запускаем тест
+public class AuthorizationTest { // класс, в котором запускаем тест
 
   private final AuthorizationService authorizationService = new AuthorizationService(); // создаём объект класса AuthorizationService
   private final AuthorizationPage authorizationPage = new AuthorizationPage(); // создаём объект класса AuthorizationPage

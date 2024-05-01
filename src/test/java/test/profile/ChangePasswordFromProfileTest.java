@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.webdriver;
 import static com.codeborne.selenide.WebDriverConditions.url;
 
-public class ChangePasswordFromProfile {
+public class ChangePasswordFromProfileTest {
 
     private final AuthorizationService authorizationService = new AuthorizationService();
     private final AuthorizationPage authorizationPage = new AuthorizationPage();
