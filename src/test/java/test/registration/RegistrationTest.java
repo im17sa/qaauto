@@ -6,6 +6,7 @@ import pages.registration.RegistrationPage;
 import services.registration.RegistrationService;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.closeWebDriver;
+import static java.time.Duration.ofSeconds;
 
 public class RegistrationTest {
 
@@ -35,8 +36,9 @@ public class RegistrationTest {
         registrationPage.setName(name);
         registrationPage.setEmail(email);
         registrationPage.setPassword(password);
-        registrationPage.getRegistrationButton().shouldBe(visible).click();
-        registrationPage.getValidator().shouldBe(visible.because("Ожидаемая валидация существующего пользователя отсутствует"));
+        registrationPage.getRegistrationButton().shouldBe(visible, ofSeconds(10)).click(); // изменил для тренировки с конфликтами
+        registrationPage.getValidator()
+                        .shouldBe(visible.because("Ожидаемая валидация существующего пользователя отсутствует"), ofSeconds(10)); // изменил для тренировки с конфликтами
     }
 
     @Test // Тест перехода со страницы регистрации на авторизацию

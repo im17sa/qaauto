@@ -1,0 +1,48 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "name" : "packages",
+  "children" : [ {
+    "name" : "test.registration.RegistrationTest",
+    "children" : [ {
+      "name" : "checkRegistration",
+      "uid" : "853aafc862c5fde",
+      "parentUid" : "7ad74088cb94964661b0783114526cec",
+      "status" : "passed",
+      "time" : {
+        "start" : 1714682008238,
+        "stop" : 1714682012030,
+        "duration" : 3792
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "checkRegistrationValidator",
+      "uid" : "f70d250ca5292085",
+      "parentUid" : "7ad74088cb94964661b0783114526cec",
+      "status" : "passed",
+      "time" : {
+        "start" : 1714682017060,
+        "stop" : 1714682021608,
+        "duration" : 4548
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "switchingToAuthorization",
+      "uid" : "3d85b190bba0cf3a",
+      "parentUid" : "7ad74088cb94964661b0783114526cec",
+      "status" : "passed",
+      "time" : {
+        "start" : 1714682026669,
+        "stop" : 1714682030109,
+        "duration" : 3440
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "test.registration.RegistrationTest"
+  } ]
+}
