@@ -1,9 +1,11 @@
 package test.authorization;
 
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import pages.authorization.AuthorizationPage;
 import services.authorization.AuthorizationService;
+import static com.codeborne.selenide.Selenide.closeWebDriver;
 
 public class AuthorizationTest { // класс, в котором запускаем тест
 
@@ -32,5 +34,10 @@ public class AuthorizationTest { // класс, в котором запуска
     authorizationPage.setPassword(password);//вызываем метод объекта  authorizationPage для ввода password
     authorizationPage.getEnterButton().click();//вызываем метод объекта  authorizationPage для получения доступа к кнопке и симуляции клика на неё с помощью метода click
     Assert.assertEquals(authorizationPage.getValidator().getText(), validator); //Проверяет, равен ли текст переменной для проверки и текст валидатора
+  }
+
+  @AfterMethod
+  public void closeTheBrowser() {
+    closeWebDriver();
   }
 }

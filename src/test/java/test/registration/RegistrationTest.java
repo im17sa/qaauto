@@ -1,13 +1,15 @@
 package test.registration;
 
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import pages.registration.RegistrationPage;
 import services.registration.RegistrationService;
-import static com.codeborne.selenide.Condition.*;
+import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Selenide.closeWebDriver;
 
 public class RegistrationTest {
 
-    private final RegistrationService registrationService =  new RegistrationService();
+    private final RegistrationService registrationService = new RegistrationService();
     private final RegistrationPage registrationPage = new RegistrationPage();
 
     @Test // Тест регистрации пользователя
@@ -41,5 +43,10 @@ public class RegistrationTest {
     public void switchingToAuthorization() {
         registrationService.openRegistrationPage();
         registrationPage.getLinkAuthorization().shouldBe(visible).click();
+    }
+
+    @AfterMethod
+    public void closeTheBrowser() {
+        closeWebDriver();
     }
 }

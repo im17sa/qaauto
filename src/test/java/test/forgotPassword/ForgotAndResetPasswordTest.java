@@ -1,10 +1,12 @@
 package test.forgotPassword;
 
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import pages.forgotPassword.ForgotPasswordPage;
 import pages.resetPassword.ResetPasswordPage;
 import services.forgotPassword.ForgotPasswordService;
 import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Selenide.closeWebDriver;
 
 public class ForgotAndResetPasswordTest {
 
@@ -40,5 +42,10 @@ public class ForgotAndResetPasswordTest {
         forgotPasswordPage.setEmail(email);
         forgotPasswordPage.getRecoverButton().shouldBe(visible).click();
         resetPasswordPage.getLinkAuthorization().shouldBe(visible).click();
+    }
+
+    @AfterMethod
+    public void closeTheBrowser() {
+        closeWebDriver();
     }
 }

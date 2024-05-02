@@ -1,11 +1,13 @@
 package test.profile;
 
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import pages.authorization.AuthorizationPage;
 import pages.profile.ProfilePage;
 import services.authorization.AuthorizationService;
 import static com.codeborne.selenide.Condition.value;
 import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Selenide.closeWebDriver;
 import static com.codeborne.selenide.Selenide.webdriver;
 import static com.codeborne.selenide.WebDriverConditions.url;
 
@@ -51,5 +53,10 @@ public class ChangePasswordFromProfileTest {
         profilePage.getLinkProfileHeader().shouldBe(visible).click();
         profilePage.getLinkHistoryOrders().click();
         profilePage.getLinkProfileMenu().shouldBe(visible).click();
+    }
+
+    @AfterMethod
+    public void closeTheBrowser() {
+        closeWebDriver();
     }
 }
