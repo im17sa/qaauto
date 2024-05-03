@@ -7,12 +7,12 @@ import static com.codeborne.selenide.Selenide.element;
 public class RegistrationPage {
 
     //Находит поля для ввода, ссылки и кнопки XPath выражению
-    private final By NAME = By.xpath("//input[@name='name']");
-    private final By EMAIL = By.xpath("//input[@name='email']");
-    private final By PASSWORD = By.xpath("//input[@name='password']");
-    private final By REGISTRATION_BUTTON = By.xpath("//button[text()='Зарегистрироваться']");
-    private final By LINK_AUTHORIZATION = By.xpath("//a[text()='Войти']");
-    private final By VALIDATOR = By.xpath("//*[text()='User already exists']");
+    private final By NAME = By.cssSelector("input[name='name']");
+    private final By EMAIL = By.cssSelector("input[name='email']");
+    private final By PASSWORD = By.cssSelector("input[name='password']");
+    private final By REGISTRATION_BUTTON = By.cssSelector("button[type='submit']");
+    private final By LINK_AUTHORIZATION = By.cssSelector("a.pl-2.common_link__2bwt_");
+    private final By VALIDATOR = By.cssSelector("p.common_error__2wD2J.text.text_type_main-default.pb-6");
 
     //Методы для взаимодействия с элементами
     public SelenideElement getName() {
