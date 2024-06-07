@@ -22,9 +22,15 @@ public class PetstoreTests {
         Integer code = 200;
         String message = "567456";
 
-        Creation user = new Creation(567456, "Artyom1234", "Sa",
-                                "An", "mailmail@gmail.com",
-                                "password12345", "89775678789", 0);
+        Creation user = new Creation(
+                567456,
+                "Artyom1234",
+                "Sa",
+                "An",
+                "mailmail@gmail.com",
+                "password12345",
+                "89775678789",
+                0);
         SuccessCreation successCreation = given()
                 .body(user)
                 .when()
@@ -46,9 +52,15 @@ public class PetstoreTests {
 
         Integer code = 200;
 
-        Update user = new Update(999777, "Matvey123456", "La",
-                "Ba", "ramdaml@gmail.com",
-                "wpassword098765", "89775678333", 0);
+        Update user = new Update(
+                999777,
+                "Matvey123456",
+                "La",
+                "Ba",
+                "ramdaml@gmail.com",
+                "wpassword098765",
+                "89775678333",
+                0);
         SuccessUpdate successUpdate = given()
                 .body(user)
                 .when()

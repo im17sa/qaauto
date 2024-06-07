@@ -11,9 +11,15 @@ public class Creation {
     private String phone;
     private Integer userStatus;
 
-    public Creation(Integer id, String username, String firstName,
-                    String lastName, String email, String password,
-                    String phone, Integer userStatus){
+    public Creation(
+            Integer id,
+            String username,
+            String firstName,
+            String lastName,
+            String email,
+            String password,
+            String phone,
+            Integer userStatus){
         this.id = id;
         this.username = username;
         this.firstName = firstName;
