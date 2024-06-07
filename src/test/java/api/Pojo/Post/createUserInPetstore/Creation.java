@@ -1,5 +1,8 @@
 package api.Pojo.Post.createUserInPetstore;
 
+import lombok.Data;
+
+@Data
 public class Creation {
 
     private Integer id;
@@ -19,7 +22,8 @@ public class Creation {
             String email,
             String password,
             String phone,
-            Integer userStatus){
+            Integer userStatus
+    ){
         this.id = id;
         this.username = username;
         this.firstName = firstName;
@@ -28,37 +32,5 @@ public class Creation {
         this.password = password;
         this.phone = phone;
         this.userStatus = userStatus;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public String getUserName() {
-        return username;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public Integer getUserStatus() {
-        return userStatus;
     }
 }

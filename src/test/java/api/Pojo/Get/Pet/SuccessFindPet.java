@@ -1,7 +1,9 @@
 package api.Pojo.Get.Pet;
 
+import lombok.Data;
 import java.util.List;
 
+@Data
 public class SuccessFindPet {
 
     private Integer id;
@@ -11,27 +13,4 @@ public class SuccessFindPet {
     private List<Tag> tags;
     private String status;
 
-    public Integer getId() {
-        return id;
-    }
-
-    public Category getCategory() {
-        return category;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public List<String> getPhotoUrls() {
-        return photoUrls;
-    }
-
-    public List<Tag> getTags() {
-        return tags;
-    }
-
-    public String getStatus() {
-        return status;
-    }
 }

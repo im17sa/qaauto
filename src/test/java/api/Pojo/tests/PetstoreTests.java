@@ -30,7 +30,8 @@ public class PetstoreTests {
                 "mailmail@gmail.com",
                 "password12345",
                 "89775678789",
-                0);
+                0
+        );
         SuccessCreation successCreation = given()
                 .body(user)
                 .when()
@@ -60,7 +61,8 @@ public class PetstoreTests {
                 "ramdaml@gmail.com",
                 "wpassword098765",
                 "89775678333",
-                0);
+                0
+        );
         SuccessUpdate successUpdate = given()
                 .body(user)
                 .when()
